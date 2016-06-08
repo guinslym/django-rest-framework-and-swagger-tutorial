@@ -4,13 +4,7 @@ from .serializers import ProductSerializer
 
 
 class ProductListCreateView(generics.ListCreateAPIView):
-    """
-    Concrete view for listing a queryset or creating a model instance.
-    based upon:
-        CreateModelMixin:Create a model instance.
-        ListModelMixin: List a queryset.
-        GenericAPIView: Base class for all other generic views.
-    """
+
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -36,14 +30,6 @@ class ProductListCreateView(generics.ListCreateAPIView):
 
 
 class ProductRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    """
-    Concrete view for retrieving, updating or deleting a model instance.
-    Based upon:
-    RetrieveModelMixin: Retrieve a model instance.
-    UpdateModelMixin: Update a model instance.
-    DestroyModelMixin: Destroy a model instance.
-    GenericAPIView : Base class for all other generic views.
-    """
 
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

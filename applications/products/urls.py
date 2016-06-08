@@ -1,15 +1,15 @@
 from django.conf.urls import url
-from .views import ProductListCreateView, ProductRetrieveUpdateDestroyView
+from products import views
 
 urlpatterns = [
     url(
         r'^products$',
-        ProductListCreateView.as_view(),
+        views.ProductListCreateView.as_view(),
         name='product-list-create'
     ),
     url(
         r'^products/(?P<product_id>[0-9]+)$',
-        ProductRetrieveUpdateDestroyView.as_view(),
+        views.ProductRetrieveUpdateDestroyView.as_view(),
         name='product-detail'
     ),
 ]

@@ -14,5 +14,5 @@ class Product(models.Model):
     created_date = models.DateTimeField(_("Creation Date"), blank=True, null=True, auto_now=True)
     in_stock = models.BooleanField(_("Is available in stock"))
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
