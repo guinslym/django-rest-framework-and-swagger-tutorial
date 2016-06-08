@@ -10,7 +10,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'corsheaders',
     'rest_framework',
-    #'rest_framework_swagger',
+    'rest_framework_swagger',
     'applications.products',
 )
 
